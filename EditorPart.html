@@ -7,36 +7,38 @@
 		<script type="text/javascript" src="js/main.js"></script>
         </head>
         <body>
-
-		<div id="menu">
-		<form>
-		<input onClick="gParticleType=1" type="radio" name="group1" value="1" >e<br>
-		<input onClick="gParticleType=2" type="radio" name="group1" value="2">µ<br>
-		<input onClick="gParticleType=3" type="radio" name="group1" value="3">t<br>
-		<input onClick="gParticleType=4" type="radio" name="group1" value="4">ν<br>
-		<input onClick="gParticleType=5" type="radio" name="group1" value="5">ν<br>
-		<input onClick="gParticleType=6" type="radio" name="group1" value="6">ν<br>
-		<input onClick="gParticleType=7" type="radio" name="group1" value="7">u<br>
-		<input onClick="gParticleType=8" type="radio" name="group1" value="8">d<br>
-		<input onClick="gParticleType=9" type="radio" name="group1" value="9">c<br>
-		<input onClick="gParticleType=10" type="radio" name="group1" value="10">s<br>
-		<input onClick="gParticleType=11" type="radio" name="group1" value="11">t<br>
-		<input onClick="gParticleType=12" type="radio" name="group1" value="12">b<br>
-		<input onClick="gParticleType=13" type="radio" name="group1" value="13" checked>Υ<br>
-		<input onClick="gParticleType=14" type="radio" name="group1" value="14">Z<br>
-		<input onClick="gParticleType=15" type="radio" name="group1" value="15">W+<br>
-		<input onClick="gParticleType=16" type="radio" name="group1" value="16">W-<br>
-		<input onClick="gParticleType=17" type="radio" name="group1" value="17">H<br>
-		<input onClick="gParticleType=18" type="radio" name="group1" value="18">g<br>
-		<input onClick="gParticleType=19" type="radio" name="group1" value="19">p<br>
-		<input onClick="gParticleType=20" type="radio" name="group1" value="20">n<br>
-		</form>
-		</div>
 		<div id="Canvas">
 		</div>
+		<div id="menu">
 		<script type="text/javascript" >
-		var paper = Raphael("Canvas",800,500);
-		var t = Editor("Canvas");
+		//var  t = Feynman(800,500,"Canvas",'{"lines":[[0,0,2,2,-1],[2,2,0,4,1],[2,2,4,2,13],[5,0,4,2,-11],[4,2,5,4,-11],[4.5,1,6,2,18]]}');
+		var  t = Feynman(800,500,"Canvas",'{"lines":[]}');
+
 		</script>
+		<form>
+		<input onClick="t.gParticleType=1" type="radio" name="group1" value="1" >e<br>
+		<input onClick="t.gParticleType=2" type="radio" name="group1" value="2">µ<br>
+		<input onClick="t.gParticleType=3" type="radio" name="group1" value="3">t<br>
+		<input onClick="t.gParticleType=4" type="radio" name="group1" value="4">ν<br>
+		<input onClick="t.gParticleType=5" type="radio" name="group1" value="5">ν<br>
+		<input onClick="t.gParticleType=6" type="radio" name="group1" value="6">ν<br>
+		<input onClick="t.gParticleType=7" type="radio" name="group1" value="7">u<br>
+		<input onClick="t.gParticleType=8" type="radio" name="group1" value="8">d<br>
+		<input onClick="t.gParticleType=9" type="radio" name="group1" value="9">c<br>
+		<input onClick="t.gParticleType=10" type="radio" name="group1" value="10">s<br>
+		<input onClick="t.gParticleType=11" type="radio" name="group1" value="11">t<br>
+		<input onClick="t.gParticleType=12" type="radio" name="group1" value="12">b<br>
+		<input onClick="t.gParticleType=13" type="radio" name="group1" value="13" checked>Υ<br>
+		<input onClick="t.gParticleType=14" type="radio" name="group1" value="14">Z<br>
+		<input onClick="E;gParticleType=15" type="radio" name="group1" value="15">W+<br>
+		<input onClick="t.gParticleType=16" type="radio" name="group1" value="16">W-<br>
+		<input onClick="t.gParticleType=17" type="radio" name="group1" value="17">H<br>
+		<input onClick="t.gParticleType=18" type="radio" name="group1" value="18">g<br>
+		<input onClick="t.gParticleType=19" type="radio" name="group1" value="19">p<br>
+		<input onClick="t.gParticleType=20" type="radio" name="group1" value="20">n<br>
+		</form>
+		</div>
+		
+		
 		</body>
         </html>
