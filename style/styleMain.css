@@ -1,0 +1,39 @@
+#DrawZone
+{
+	width: 80%;
+	height: 80%;
+	border-radius: 5px;
+	background-color: white;
+	margin-left: auto;
+	margin-right:auto;
+	
+}
+
+body
+{
+	
+	background-color: #F0F0F0;
+}
+
+
+#MainTitle
+{
+	font: 20px Arial;
+	font-weight: bold;
+	line-height: 1;
+	color: gray;
+	width:auto;
+	max-width:333px;
+	border-top-right-radius:5px;	
+	border-bottom-left-radius:5px;	
+	padding:10px;
+	margin-top:0px;
+	border:1px black;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	position:relative;
+	margin-left: auto;
+	margin-right:auto;
+	width: 10%;
+	background-color:white;
+	text-align: center;
+}
