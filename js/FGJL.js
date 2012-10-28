@@ -95,7 +95,7 @@ function FGJL(ZoneToDraw) {
 		var m = d3.svg.mouse(this);
 		TempPoint.push(DrawPaleCircle(Chart,m[0],m[1]+6));
 	}
-	this.RefreshChoicePart = function(){ 
+	this.CreateChoicePart = function(){ 
 	
 		for(i=ChoiceI;i<(ChoiceI+MaxChoicePrint);i++)
 		{
@@ -104,16 +104,26 @@ function FGJL(ZoneToDraw) {
 		return this;
 		
 	}
+	this.RefreshChoicePart = function(){ 
+	
+		for(i=ChoiceI;i<(ChoiceI+MaxChoicePrint);i++)
+		{
+			Case[i].attr("x",100);
+		}
+		return this;
+		
+	}
 	this.DrawChoice = function(letter,number){
 		Case.push(ChoiceZone.append("rect").attr("x",5).attr("y",(-(MaxChoicePrint-number+1)*widthChoice)+6).attr("height",widthChoice-5).attr("width",widthChoice-10).style("fill","#FFFFFF").style("stroke","#CCCCCC").transition().duration(6000).attr("y",6+(number*widthChoice)));
 		
-		return this;
 	}
 	
 	var Chart = d3.select("#" + ZoneToDraw).append("svg").attr("class", "chart").attr("width", widthArea).attr("height", heightArea);
-	var ChoiceZone = d3.select("#ChoiceZone").append("svg").attr("class", "chart").attr("width", widthChoice).attr("height", heightArea);
-	RefreshChoicePart();
+	var ChoiceZone = d3.select("#ChoiceZone").append("svg").attr("class", "choicezone").attr("width", widthChoice).attr("height", heightArea);
+	CreateChoicePart();
 	RefreshMainPart();
+	
+	
 	window.onkeydown = function(event){
                 if(event.keyCode==38)
                 {
