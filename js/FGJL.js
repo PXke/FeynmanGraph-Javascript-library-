@@ -87,12 +87,13 @@ function FGJL(ZoneToDraw) {
 	}
 	
 	this.particleShow = function() {
+		
 		for ( i = 0; i < TempPoint.length; i++) {
 			TempPoint[i].remove();
 		}
 		TempPoint=[]
 		var m = d3.svg.mouse(this);
-		TempPoint.push(Chart.append("circle").attr("cx", m[0]).attr("cy", m[1]+5).attr("r", 5).style("stroke", "#CCCCCC").style("stroke-opacity", 0.01).style("opacity", 0.1));
+		TempPoint.push(DrawPaleCircle(Chart,m[0],m[1]+6));
 	}
 	this.RefreshChoicePart = function(){ 
 	
@@ -105,11 +106,12 @@ function FGJL(ZoneToDraw) {
 	}
 	this.DrawChoice = function(letter,number){
 		Case.push(ChoiceZone.append("rect").attr("x",5).attr("y",(-(MaxChoicePrint-number+1)*widthChoice)+6).attr("height",widthChoice-5).attr("width",widthChoice-10).style("fill","#FFFFFF").style("stroke","#CCCCCC").transition().duration(6000).attr("y",6+(number*widthChoice)));
+		
 		return this;
 	}
 	
-	Chart = d3.select("#" + ZoneToDraw).append("svg").attr("class", "chart").attr("width", widthArea).attr("height", heightArea);
-	ChoiceZone = d3.select("#ChoiceZone").append("svg").attr("class", "chart").attr("width", widthChoice).attr("height", heightArea);
+	var Chart = d3.select("#" + ZoneToDraw).append("svg").attr("class", "chart").attr("width", widthArea).attr("height", heightArea);
+	var ChoiceZone = d3.select("#ChoiceZone").append("svg").attr("class", "chart").attr("width", widthChoice).attr("height", heightArea);
 	RefreshChoicePart();
 	RefreshMainPart();
 	window.onkeydown = function(event){
@@ -129,3 +131,8 @@ function FGJL(ZoneToDraw) {
 	return this;
 }
 
+
+
+function DrawPaleCircle(ChartParameter,CenterX,CenterY){
+	return ChartParameter.append("circle").attr("cx", CenterX).attr("cy", CenterY).attr("r", 5).style("stroke", "#CCCCCC").style("stroke-opacity", 0.01).style("opacity", 0.1)	
+}
