@@ -41,8 +41,14 @@ function FGJL(ZoneToDraw) {
 		return this;
 	}
 	
+	
+	
+	//####################################################################################################################
+	// VIEW
+	//####################################################################################################################
+	
 	//This function is here to draw what have to be drawn  !
-	GUI = function(){
+	View = function(){
 		
 		var i = 0;
 		
@@ -65,16 +71,12 @@ function FGJL(ZoneToDraw) {
 			
 			for(i=0;i<CaseToDraw;i++)
 			{
-			
 				ChoiceZone.append("svg:line").attr("x1",0).attr("x2",0).attr("y1",i*widthChoice).attr("y2",(i+1)*widthChoice-20).style("stroke","black");
-				ChoiceZone.append("svg:line").attr("x1",StepX*(i+1)).attr("x2",StepX*(i+1)).attr("y1",0).attr("y2",0).style("stroke","#CCCCCC");
+				ChoiceZone.append("svg:line").attr("x1",StepX*(i+1)).attr("x2",StepX*(i+1)).attr("y1",0).attr("y2",0).style("stroke","black");
 				ChoiceZone.append("svg:line").attr("x1",StepX*(i+1)).attr("x2",StepX*(i+1)).attr("y1",0).attr("y2",heightArea).style("stroke","#CCCCCC");
-				ChoiceZone.append("svg:line").attr("x1",StepX*(i+1)).attr("x2",StepX*(i+1)).attr("y1",0).attr("y2",heightArea).style("stroke","#CCCCCC");
-				
+				ChoiceZone.append("svg:line").attr("x1",StepX*(i+1)).attr("x2",StepX*(i+1)).attr("y1",0).attr("y2",heightArea).style("stroke","#CCCCCC");	
 			}
 		}
-		
-		
 	}
 	
 	
@@ -86,9 +88,8 @@ function FGJL(ZoneToDraw) {
 	}
 	
 	Init();
-	GUI();
-	
-	
+	View();
+		
 }
 
 

@@ -1,13 +1,13 @@
 #DrawZone
 {
-	width: 77%;
+	width: 85%;
 	height: 700px;
 	border-radius: 5px;
 	background-color: white;
 	margin-left: auto;
-	margin-right:auto;
+	margin-right:2%;
 	position:relative;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0 5px 10px rgba(0,0,0,10);
 }
 
 #ChoiceZone
@@ -20,12 +20,12 @@
 	float:left;
 	margin-right:auto;
 	position:relative;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	box-shadow: 0 5px 10px rgba(0,0,0,10);
 }
 
 body
 {
-	background-color: #F3F3F3;
+	background-color: #383838;
 }
 
 
@@ -45,7 +45,7 @@ body
 	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	position:relative;
 	margin-left: auto;
-	margin-right:auto;
+	margin-right:39%;
 	width: 10%;
 	background-color:white;
 	text-align: center;
